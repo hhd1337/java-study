@@ -1,0 +1,36 @@
+package basic.extends1.access.parent;
+
+public class Parent {
+    public int publicValue;
+    protected int protectedValue;
+    int defaultValue;
+    private int privateValue;
+
+    public void publicMethod() {
+        System.out.println("Parent.publicMethod");
+    }
+
+    protected void protectedMethod() {
+        System.out.println("Parent.protectedMethod");
+    }
+
+    void defaultMethod() {
+        System.out.println("Parent.defaultMethod");
+    }
+
+    private void privateMethod() {
+        System.out.println("Parent.privateMethod");
+    }
+
+    public void printParent() {
+        System.out.println("------Parent 메서드 안------");
+        System.out.println("publicValue = " + publicValue);
+        System.out.println("protectedValue = " + protectedValue);
+        System.out.println("defaultValue = " + defaultValue);
+        System.out.println("privateValue = " + privateValue);
+
+        //당연히 같은 패키지, 같은 클래스에서는 모두 접근 가능
+        defaultMethod();
+        privateMethod();
+    }
+}
