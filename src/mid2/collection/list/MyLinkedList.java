@@ -1,10 +1,11 @@
-package mid2.collection.link;
+package mid2.collection.list;
 
-public class MyLinkedListV3<E> {
+public class MyLinkedList<E> implements MyList<E> {
 
     private Node<E> first;
     private int size = 0;
 
+    @Override
     public void add(E e) {
         Node<E> newNode = new Node<>(e);
         if (first == null) {
@@ -17,7 +18,7 @@ public class MyLinkedListV3<E> {
         size++;
     }
 
-    // 추가 코드: 인덱스 위치에 데이터 삽입
+    @Override
     public void add(int index, E e) {
         Node<E> newNode = new Node<>(e);
         if (index == 0) {
@@ -31,7 +32,7 @@ public class MyLinkedListV3<E> {
         size++;
     }
 
-    // 추가 코드: 인덱스 위치의 데이터 삭제
+    @Override
     public E remove(int index) {
         Node<E> removeNode = getNode(index);
         E removedItem = removeNode.item;
@@ -55,6 +56,7 @@ public class MyLinkedListV3<E> {
         return node;
     }
 
+    @Override
     public E set(int index, E e) {
         Node<E> indexNode = getNode(index);
         E old = indexNode.item;
@@ -62,6 +64,7 @@ public class MyLinkedListV3<E> {
         return old;
     }
 
+    @Override
     public E get(int index) {
         return getNode(index).item;
     }
@@ -74,6 +77,7 @@ public class MyLinkedListV3<E> {
         return node;
     }
 
+    @Override
     public int indexOf(Object o) {
         int index = 0;
         for (Node<E> node = first; node != null; node = node.next) {
@@ -85,6 +89,7 @@ public class MyLinkedListV3<E> {
         return -1;
     }
 
+    @Override
     public int size() {
         return size;
     }
