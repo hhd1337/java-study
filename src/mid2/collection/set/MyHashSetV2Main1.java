@@ -1,6 +1,6 @@
 package mid2.collection.set;
 
-public class MyhashSetV2Main1 {
+public class MyHashSetV2Main1 {
 
     public static void main(String[] args) {
         MyHashSetV2 set = new MyHashSetV2(10);
@@ -17,5 +17,9 @@ public class MyhashSetV2Main1 {
         System.out.println("B.hashCode() = " + "B".hashCode());
         System.out.println("AB.hashCode() = " + "AB".hashCode());
         System.out.println("SET.hashCode() = " + "SET".hashCode());
+
+        String searchValue = "SET";
+        boolean result = set.contains(searchValue);
+        System.out.println("set.contains(" + searchValue + ") = " + result);
     }
 }

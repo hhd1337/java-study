@@ -13,7 +13,7 @@ public class Member {
         return id;
     }
 
-    // id가 같으면 같은 멤버라는 로직을 equals()를 재정의하여 반영하려고 함.
+    // id가 같으면 같은 멤버라는 로직을 equals()를 재정의하여 반영.
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) {
