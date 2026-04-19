@@ -8,7 +8,10 @@ public class BankMain {
     public static void main(String[] args) throws InterruptedException {
         //BankAccount account = new BankAccountV1(1000);
         //BankAccount account = new BankAccountV2(1000);
-        BankAccount account = new BankAccountV3(1000);
+        //BankAccount account = new BankAccountV3(1000);
+        //BankAccount account = new BankAccountV4(1000);
+        //BankAccount account = new BankAccountV5(1000);
+        BankAccount account = new BankAccountV6(1000);
 
         // 두 스레드 t1, t2가 동시에 같은 account(계좌)에 접근해서 800원 출금 시도.
         Thread t1 = new Thread(new WithdrawTask(account, 800), "t1");
